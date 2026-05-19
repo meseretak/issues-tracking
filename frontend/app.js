@@ -2703,10 +2703,3 @@ async function submitEditIssue() {
     toast(e.message, 'error');
   }
 }
-`, fields);
-    toast('Issue updated successfully!', 'success');
-    initApp();
-  } catch(e) {
-    toast(e.message, 'error');
-  }
-}
