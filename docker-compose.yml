@@ -10,12 +10,23 @@ services:
     ports:
       - "8000:8000"
     volumes:
+      # Persistent DB data — survives container restarts & re-deployments
       - awash_data:/app/backend/data
+      # Persistent uploads
       - awash_uploads:/app/uploads
     environment:
       - DATABASE_URL=sqlite+aiosqlite:////app/backend/data/awash_tracker.db
+      - PYTHONIOENCODING=utf-8
     restart: always
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 30s
 
 volumes:
   awash_data:
+    driver: local
   awash_uploads:
+    driver: local
