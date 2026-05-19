@@ -1,0 +1,4 @@
+js = open(chr(39)+chr(105)+chr(115)+chr(115)+chr(117)+chr(101)+chr(115)+chr(32)+chr(116)+chr(114)+chr(97)+chr(99)+chr(107)+chr(105)+chr(110)+chr(103)+chr(47)+chr(102)+chr(114)+chr(111)+chr(110)+chr(116)+chr(101)+chr(110)+chr(100)+chr(47)+chr(97)+chr(112)+chr(112)+chr(46)+chr(106)+chr(115)+chr(39),encoding=chr(117)+chr(116)+chr(102)+chr(45)+chr(56)).read()
+print(chr(74)+chr(83)+chr(32)+chr(108)+chr(105)+chr(110)+chr(101)+chr(115)+chr(58),js.count(chr(10)))
+for fn in [chr(114)+chr(101)+chr(110)+chr(100)+chr(101)+chr(114)+chr(67)+chr(104)+chr(97)+chr(116),chr(114)+chr(101)+chr(110)+chr(100)+chr(101)+chr(114)+chr(69)+chr(120)+chr(101)+chr(99)+chr(117)+chr(116)+chr(105)+chr(118)+chr(101),chr(114)+chr(101)+chr(110)+chr(100)+chr(101)+chr(114)+chr(73)+chr(110)+chr(116)+chr(101)+chr(103)+chr(114)+chr(97)+chr(116)+chr(105)+chr(111)+chr(110)+chr(115)]:
+    print(fn+chr(58),(chr(102)+chr(117)+chr(110)+chr(99)+chr(116)+chr(105)+chr(111)+chr(110)+chr(32))+fn in js)

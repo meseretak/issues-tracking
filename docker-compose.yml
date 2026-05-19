@@ -1,0 +1,21 @@
+version: '3.8'
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: awash-bank-issue-tracker:latest
+    container_name: awash_issue_tracker
+    ports:
+      - "8000:8000"
+    volumes:
+      - awash_data:/app/backend/data
+      - awash_uploads:/app/uploads
+    environment:
+      - DATABASE_URL=sqlite+aiosqlite:////app/backend/data/awash_tracker.db
+    restart: always
+
+volumes:
+  awash_data:
+  awash_uploads:
