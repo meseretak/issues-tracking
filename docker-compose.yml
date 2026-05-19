@@ -5,6 +5,7 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
+      network: host
     image: awash-bank-issue-tracker:latest
     container_name: awash_issue_tracker
     ports:
